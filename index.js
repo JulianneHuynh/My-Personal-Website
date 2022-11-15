@@ -16,7 +16,7 @@ function renderFoods(foods){
       countryName.textContent = food.country;
       foodName.textContent = food.name;
       foodImage.src = food.image;
-      foodRating.textContent = food.rating;
+      
     });
     flagBar.append(span);
   });
