@@ -1,6 +1,5 @@
 fetch('http://localhost:3000/foods')
     .then(resp => resp.json())
-
     .then(foodArray => renderFoods(foodArray));
 
 console.log('Hello World')
