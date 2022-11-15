@@ -1,5 +1,6 @@
 fetch('./db.json')
     .then(resp => resp.json())
+
     .then(foodArray => renderFoods(foodArray));
 
 const countryName = document.querySelector("countrys-name")
@@ -19,7 +20,13 @@ function renderFoods(foods){
     });
     flagBar.append(span);
   });
-}
+   
+
+
+
+
+
+
 
 
 
