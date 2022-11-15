@@ -3,30 +3,31 @@ fetch('http://localhost:3000/foods')
 
     .then(foodArray => renderFoods(foodArray));
 
-console.log('Hello World')
 
 const countryName = document.querySelector("#countrys-name")
 const foodName = document.querySelector("#food-name")
 const flagBar= document.querySelector("#flag-bar")
-// const foodImage
+const resetBtn= document.querySelector("#reset-btn")
+const foodImage= document.querySelector("#image")
 
 function renderFoods(foods){
   foods.forEach((food)=> {
-  const span = document.createElement("span");
-    span.src = 
-    // how can i add flag images as a span without images in dbjson file.
-    span.addEventListener("click",()=> {
+// do we want the event on the flags or the button? or both?
+    resetBtn.addEventListener("click",()=> {
       countryName.textContent = food.country;
       foodName.textContent = food.name;
-      foodImage.src = food.image;
+      // insert randomizer
+      
+      ;
       
     });
-    flagBar.append(span);
+    flagBar.append(resetBtn);
   })}
    
 
 
 
+// how can i add flag images as a span without images in dbjson file. // added photos through index.html. refer to photos by class name
 
 
 
