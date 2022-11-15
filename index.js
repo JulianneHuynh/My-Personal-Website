@@ -1,11 +1,14 @@
-fetch('./db.json')
+fetch('http://localhost:3000/foods')
     .then(resp => resp.json())
 
     .then(foodArray => renderFoods(foodArray));
 
-const countryName = document.querySelector("countrys-name")
-const foodName = document.querySelector("food-name")
-const foodImage
+console.log('Hello World')
+
+const countryName = document.querySelector("#countrys-name")
+const foodName = document.querySelector("#food-name")
+const flagBar= document.querySelector("#flag-bar")
+// const foodImage
 
 function renderFoods(foods){
   foods.forEach((food)=> {
@@ -19,7 +22,7 @@ function renderFoods(foods){
       
     });
     flagBar.append(span);
-  });
+  })}
    
 
 
