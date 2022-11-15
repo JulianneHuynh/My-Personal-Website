@@ -1,4 +1,3 @@
-
 fetch('./db.json')
     .then(resp => resp.json())
     .then(data => renderingData(data))
@@ -11,7 +10,13 @@ const renderingData= (data)=> {
         const imageTag= document.createElement('img')
         imageTag.src=foods.image
         images.append(imageTag)
-    })    
+})}    
+
+function handleFetch() {
+ fetch("https://mycookbook-io1.p.rapidapi.com/recipes/rapidapi")
+ .then(res => res.json())
+ .then(data => console.log(data))
+
 }
 
 
