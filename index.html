@@ -2,8 +2,49 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type='module' src="index.js"></script>
+    <link rel="stylesheet" href="style.css" type="application/json">
+    <title>Wayfare Eats Radomizer </title>
+  </head>
+  <body>
+    <div class="logo">
+      <h1> Wayfare Eats Randomizer</h1>
+    </div>  
+    <!-- flag bar -->
+  <div id="flag-bar">
+    <!--flag images here-->  
+    <button id="reset-btn">Reset Food</button>
+  </div>
+    <!-- food details-->
+  <div id="food-detail">
+    <h2 id="countrys-name">Country's Name</h2> 
+    <h3 id="food-name">Insert Food Name Here</h3> 
+      <img 
+         id="image" 
+         src=""  
+         alt ="Food's Pic"
+      />  <!-- display food image here -->
+      
+      <h4>Total Stars: <span id= "rating-count">Food Rating</span></h4>
+      <form id="rating-form">
+        <input type="text" placeholder="Enter Rating" id="rating"
+        name="rating" />
+        <input type="submit" value="add rating" />
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <script defer src="src/index.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
     <title>Dinner Ramdomizer</title>
-  </head>
-  
+  </head> -->
