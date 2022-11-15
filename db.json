@@ -1,0 +1,47 @@
+
+{
+    "foods": [
+      {
+        "id": "Italian",
+        "name": "Spaghetti and MeatBalls",
+        "image": "https://www.modernfarmhouseeats.com/wp-content/uploads/2020/12/Homemade-Spaghetti-and-Meatballs-31-660x990.jpg",
+        "rating":8
+      },
+      {
+        "id": "Japanese",
+        "name": "Bento Box",
+        "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1120w,f_auto,q_auto:best/newscms/2020_42/3419773/201013-bento-box-6-ew-1147a.jpg",
+        "Comment": 8
+      },
+      {
+        "id": "Puerto Rican",
+        "name": "Mofongo",
+        "image": "https://www.foodfidelity.com/wpcom-128392210/wp-content/uploads/2018/01/mofongo-composed.jpg.webp",
+        "rating": 8
+      },
+      {
+        "id": "Indian",
+        "name": "Butter Chicken",
+        "image": "https://images.themodernproper.com/billowy-turkey/production/posts/2021/Butter-Chicken-16.jpg?w=1067&auto=compress%2Cformat&fit=crop&dm=1612504134&s=c947c24c4b5421403e363337a2066d4c",
+        "rating": 8
+      },
+      {
+        "id": "Cajun",
+        "name": "Seafood Gumbo",
+        "image": "https://leitesculinaria.com/wp-content/uploads/fly-images/240004/seafood-gumbo-1200x1200-c.jpg",
+        "rating": 8
+      },
+      {
+        "id": "American",
+        "name": "Burger",
+        "image": "https://bestbeefrecipes.com/wp-content/uploads/2021/06/loaded-burgers-1.jpg",
+        "rating": 8
+      },
+      {
+        "id": "Spainish",
+        "name": "Paella",
+        "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2000%2F05%2F01%2F0867_180612_DuPree_MyRecipe_Traditional20Spanish20Paella_699620copy-2000.jpg",
+        "rating": 8
+      }
+    ]
+  }
