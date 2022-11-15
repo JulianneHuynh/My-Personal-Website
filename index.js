@@ -7,13 +7,15 @@ fetch('http://localhost:3000/foods')
 const countryName = document.querySelector("#countrys-name")
 const foodName = document.querySelector("#food-name")
 const flagBar= document.querySelector("#flag-bar")
-const resetBtn= document.querySelector("#reset-btn")
+const randomizerBtn= document.querySelector("#randomizer-btn")
 const foodImage= document.querySelector("#image")
+
+
 
 function renderFoods(foods){
   foods.forEach((food)=> {
 // do we want the event on the flags or the button? or both?
-    resetBtn.addEventListener("click",()=> {
+    randomizerBtn.addEventListener("click",()=> {
       countryName.textContent = food.country;
       foodName.textContent = food.name;
       // insert randomizer
@@ -21,7 +23,7 @@ function renderFoods(foods){
       ;
       
     });
-    flagBar.append(resetBtn);
+    flagBar.append(randomizerBtn);
   })}
    
 
