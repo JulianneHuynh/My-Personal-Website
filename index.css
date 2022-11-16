@@ -1,5 +1,4 @@
-#randomizer-btn { 
-    background-image: url(images/plate_image.jpg);
-    width: 239.99;
-    height: 160;
+img{
+    height: 400;
+    width: auto;
 }
