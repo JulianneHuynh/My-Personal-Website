@@ -1,42 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <script defer src="./index.js"></script>
-    <link rel="stylesheet" href="style.css" type="application/json">
-    <title>Wayfare Eats Radomizer </title>
+    <link rel="stylesheet" href="style.css">
+     <title>Wayfare Eats Radomizer </title>
   </head>
   <body>
     <div class="logo">
       <h1> Wayfare Eats Randomizer</h1>
-    </div>
+    </div>  
     <!-- flag bar -->
   <div id="flag-bar">
-    <!--flag images here-->
-    <img class="india" src="Flag Images/india.webp" alt="Indian Flag" title="Indian Meal">
-    <img class="italy" src="Flag Images/italy.webp" alt="Italian Flag" title="Italian Meal">
-    <img class="japan" src="Flag Images/japan.webp" alt="Japanese Flag" title="Japanese Meal">
-    <img class="puerto-rico" src="Flag Images/puerto rico.webp" alt="Puerto Rican Flag" title="Puerto Rican Meal">
-    <img class="spain" src="Flag Images/spain.webp" alt="Spanish Flag" title="Spanish Meal">
-    <img class="usa" src="Flag Images/usa.webp" alt="American Flag" title="American Meal" width="239.99" height="160">
+    <!--flag images here-->  
+    <img class="india" src="Flag Images/india.webp" alt="Indian Flag" title="Indian Meal" width="200" height="140">
+    <img class="italy" src="Flag Images/italy.webp" alt="Italian Flag" title="Italian Meal" width="200" height="140">
+    <img class="japan" src="Flag Images/japan.webp" alt="Japanese Flag" title="Japanese Meal" width="200" height="140">
+    <img class="puerto-rico" src="Flag Images/puerto rico.webp" alt="Puerto Rican Flag" title="Puerto Rican Meal" width="200" height="140">
+    <img class="spain" src="Flag Images/spain.webp" alt="Spanish Flag" title="Spanish Meal" width="200" height="140">
+    <img class="usa" src="Flag Images/usa.webp" alt="American Flag" title="American Meal" width="200" height="140">
     </div>
     <div>
-    <button id="Randomizer"> :knife_fork_plate: </button>
+    <button id="Randomizer"> 🍽 </button>
   </div>
   <!-- food details go here // created and appended in .js-->
-  <div id="food-detail">
+  <div id="food-detail"> 
     <h1 id="food-name">Food Name</h1>
     <h3 id="country">Country</h3>
     <img id="image">
-    <h3 id="rating">Rating</h3>
   </div>
   <!-- <div id="food-result-containe
     <h4 id="food-result"></h4>
         display food image here -->
+
+
       <!-- display food image here -->
-      <h4><img class="icon" src= "./Flag Images/star-icon.png" width="20" hieght="20"/>Total Stars: <span id= "rating-count">#</span><img class="icon" src= "./Flag Images/star-icon.png" width="20" hieght="20"/></h4>
+      
+      <h4><img class="icon" src= "images/star.png" width="20" height="20"/>Total Stars: <span id= "rating-count">0</span><img class="icon" src= "images/star.png" width="20" height="20"/></h4>
       <form id="rating-form">
-        <input type="text" placeholder="Enter Rating" id="rating" name="rating" />
+        <input id="userInput" type="text" placeholder="Enter Rating" id="rating" name="rating" />
         <input type="submit" value="Add Stars" />
       </form>
     </div>
