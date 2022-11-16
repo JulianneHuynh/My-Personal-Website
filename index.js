@@ -8,14 +8,10 @@ const foodDetails = document.querySelector("#food-detail")
 const randomizer = document.querySelector('#Randomizer')
 
 
-const renderFoods= (foodArray) => {
-    console.log(foodArray)
-    /* there is a forEach error but the fact that the data is still in #food-detail
-    tells us that it still went through each of the foodArray objects */
-    foodArray.forEach(foods => {
+const renderFoods= ((foodArray) => {
+  ///// adding random() event listener?
+    foodArray.forEach(food => {
         // each return creates an element
-        /*I cant think of a way to make this global but it might help with the
-        random() problem <lines 41&42> */
         let foodCountry= document.createElement('h2')
         let foodName= document.createElement('h3')
         let foodImage= document.createElement('img')
@@ -23,23 +19,22 @@ const renderFoods= (foodArray) => {
             foodImage.width= 500
         let foodRating= document.createElement('rating')
         // each element gets the .json data attached
-        foodCountry.append(foods.country)
-        foodName.append(foods.name)
-        foodImage.src= foods.image
-        foodRating.append(foods.rating)
+        foodCountry.append(food.country)
+        foodName.append(food.name)
+        foodImage.src= food.image
+        foodRating.append(food.rating)
+        
         // each element is attached to the food-detail tag
         foodDetails.append(foodCountry)
         foodDetails.append(foodName)
         foodDetails.append(foodImage)
         foodDetails.append(foodRating)
-  ///// adding random() event listener?
-})}
+        console.log(foodCountry, foodName, foodImage, foodRating)
+    
+  
+})})
 renderFoods()
 
-    
-//Randomizer function 
-/*do you know how to call the renderFoods() in random()? i think thats the answer
-if the button is under the 'forEach' function it runs an error for every return */
 function random(){
   randomizer.addEventListener("click",(e)=> {
         foodCountry.textContent = food.country;
