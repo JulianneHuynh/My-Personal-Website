@@ -10,13 +10,17 @@ const randomizer = document.querySelector('#Randomizer')
 
 const renderFoods= (foodArray) => {
     console.log(foodArray)
+    /* there is a forEach error but the fact that the data is still in #food-detail
+    tells us that it still went through each of the foodArray objects */
     foodArray.forEach(foods => {
         // each return creates an element
+        /*I cant think of a way to make this global but it might help with the
+        random() problem <lines 41&42> */
         let foodCountry= document.createElement('h2')
         let foodName= document.createElement('h3')
         let foodImage= document.createElement('img')
-            foodImage.height= 200
-            foodImage.width= 200
+            foodImage.height= 400
+            foodImage.width= 500
         let foodRating= document.createElement('rating')
         // each element gets the .json data attached
         foodCountry.append(foods.country)
@@ -28,16 +32,14 @@ const renderFoods= (foodArray) => {
         foodDetails.append(foodName)
         foodDetails.append(foodImage)
         foodDetails.append(foodRating)
-  // adding random() event listener
-
-
-
+  ///// adding random() event listener?
 })}
 renderFoods()
 
     
 //Randomizer function 
-
+/*do you know how to call the renderFoods() in random()? i think thats the answer
+if the button is under the 'forEach' function it runs an error for every return */
 function random(){
   randomizer.addEventListener("click",(e)=> {
         foodCountry.textContent = food.country;
@@ -45,6 +47,8 @@ function random(){
         
 })}
 random()
+
+/* I havn't really looked beyond this point */
 
 flagBar.append(randomizer);
   let result = document.querySelector('h1');
@@ -61,4 +65,3 @@ randomizer.addEventListener('click',() => {
   let index = getRandomNumber(0,flags.length-1);
   result.textContent = flags[index]
 });
-
