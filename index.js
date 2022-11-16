@@ -1,48 +1,64 @@
 fetch('http://localhost:3000/foods')
     .then(resp => resp.json())
-    .then(foodArray => renderFoods(foodArray));
+    .then(foodArray => {
+      renderFoods(foodArray);
+      reRandomize(foodArray)
+})
 
-const countryName = document.querySelector("#countrys-name")
-const foodName = document.querySelector("#food-name")
+
 const flagBar= document.querySelector("#flag-bar")
+const foodDetails = document.querySelector("#food-detail")
+const randomizer = document.querySelector('#Randomizer')
+const emptyCountry= document.querySelector('#country')
+const emptyName= document.querySelector('#food-name')
+const emptyImage= document.querySelector('#image')
+const emptyRating= document.querySelector('#rating')
 
-const randomBtn= document.querySelector("#random-btn")
+const renderFoods= (foodArray => {
+      randomizer.addEventListener('click', (e) => {
+        const randomFood = foodArray[Math.floor(Math.random() * foodArray.length)]
+        emptyCountry.textContent= randomFood.country
+        emptyName.textContent= randomFood.name
+        emptyImage.src= randomFood.image
+          emptyImage.height= 500
+          emptyImage.width= 600
+        emptyRating.textContent= randomFood.rating
+})})
 
-const foodImage= document.querySelector("#image")
+const reRandomize= (foodArray => {
+    randomizer.addEventListener('keydown', (event) => {
+      const randomFood = foodArray[Math.floor(Math.random() * foodArray.length)]
+      emptyCountry.textContent= randomFood.country
+      emptyName.textContent= randomFood.name
+      emptyImage.src= randomFood.image
+        emptyImage.height= 500
+        emptyImage.width= 600
+      emptyRating.textContent= randomFood.rating
+})})
 
+document.addEventListener('keydown', (event) =>{
+  const keyUp= () =>{
+    switch (event.key){
+    case 'ArrowUp': return true}}
+  const keyDown= () => {
+    switch (event.key) {
+    case 'ArrowDown': return true}}
+  keyUp();
+  keyDown();
+  keyUp() ? alert('Enjoy your flavor adventure') : console.log('')
+  keyDown() ? reRandomize() : console.log('')
+})
 
-function renderFoods(foods){
-  foods.forEach((food)=> {
-// do we want the event on the flags or the button? or both?
-    randomizerBtn.addEventListener("click",()=> {
-      countryName.textContent = food.country;
-      foodName.textContent = food.name;
-      // insert randomizer
-      
-      ;
-      
-    });
-    flagBar.append(randomizerBtn);
-  })}
+function addRatingForm() {
+  const addRatingForm = document.querySelector("#rating-form");
+  addRatingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const ratingInput = event.target["rating"].value;
+    const ratingAmount = document.querySelector("#rating-count");
+    ratingAmount.textContent =
+      parseInt(ratingAmount.textContent) + parseInt(ratingInput);
+  });
+}
+addRatingForm();
 
-
-//Randomizer function 
-  let randomizer = document.querySelector(//randomizer pic'); 
-  )
-  let result = document.querySelector('h1');
-
-  let flags = document.querySelector("flag-bar");
-  console.log(flags)
-// how to get flag img vs text 
-
-  function getRandomNumber(min,max) {
-    let step1 = max - min + 1; 
-    let step2 = Math.random() * step1;
-    let result = Math.floor(step2) + min;
-    return  result;
-  }
-btnRandomizer.addEventListener('click',() => {
-  let index = getRandomNumber(0,flags.length-1);
-  result.textContent = flags[index]
-});
 
