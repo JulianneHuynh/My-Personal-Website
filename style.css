@@ -1,0 +1,15 @@
+body {
+  background-image: url("./images/map.png");
+  /* background-color: black; */
+  }
+  h1{
+      font-family:'Times New Roman', Times, serif;
+      font-variant: small-caps;
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+  }
+  #flag-bar {
+    margin-left: auto;
+    margin-right: auto 
+  }
