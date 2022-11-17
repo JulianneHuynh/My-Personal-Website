@@ -2,11 +2,10 @@ fetch('http://localhost:3000/foods')
     .then(resp => resp.json())
     .then(foodArray => {
       renderFoods(foodArray);
-      reRandomize(foodArray)
+      reRandomize(foodArray);
+      renderFlags(foodArray)
 })
 
-
-const flagBar= document.querySelector("#flag-bar")
 const foodDetails = document.querySelector("#food-detail")
 const randomizer = document.querySelector('#Randomizer')
 const emptyCountry= document.querySelector('#country')
@@ -14,14 +13,33 @@ const emptyName= document.querySelector('#food-name')
 const emptyImage= document.querySelector('#image')
 const emptyRating= document.querySelector('#rating')
 
+function renderFlags(flags) {
+  flags.forEach((flag) =>{
+    const imageFlag = document.createElement("img")
+    imageFlag.src = flag.flag_image;
+        imageFlag.height= 100;
+        imageFlag.width= 150;
+    const flagBar= document.querySelector("#flag-bar")
+    imageFlag.addEventListener("click",()=>{
+      emptyCountry.textContent= flag.country;
+      emptyName.textContent= flag.name;
+      emptyImage.src= flag.image;
+        emptyImage.height= 300;
+        emptyImage.width= 400;
+     
+    });
+    flagBar.append(imageFlag);
+  })
+}
+
 const renderFoods= (foodArray => {
       randomizer.addEventListener('click', (e) => {
         const randomFood = foodArray[Math.floor(Math.random() * foodArray.length)]
         emptyCountry.textContent= randomFood.country
         emptyName.textContent= randomFood.name
         emptyImage.src= randomFood.image
-          emptyImage.height= 500
-          emptyImage.width= 600
+          emptyImage.height= 300
+          emptyImage.width= 400
         emptyRating.textContent= randomFood.rating
 })})
 
@@ -60,5 +78,6 @@ function addRatingForm() {
   });
 }
 addRatingForm();
+
 
 

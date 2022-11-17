@@ -1,15 +1,72 @@
-body {
-  background-image: url("./images/map.png");
-  /* background-color: black; */
-  }
+html {
+  background-image: url("./images/map6.png");
+  background-color: black;
+  text-align:center;
+  background-position: center center;
+  background-size: 1200px;
+
+  background-repeat: no-repeat;
+
+
+
+}
   h1{
-      font-family:'Times New Roman', Times, serif;
-      font-variant: small-caps;
-      text-align: center;
-      padding: 0px;
-      margin: 0px;
+    font-family:'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    text-align: center;
+    color: rgb(231, 221, 108);
+    font-size: 65px;
+    padding: 0px;
+    margin: 0px;
+
+}
+h2{
+  font-family:'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 55px;
+  padding: 0px;
+  margin: 0px;
+}
+h3{
+  font-family:'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  text-align: center;
+  color: rgb(237, 181, 216);
+  font-size: 45px;
+  padding: 0px;
+  margin: 0px;
+}
+h4{
+  font-family:'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  text-align: center;
+  color: rgb(2, 181, 216);
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+}
+#flag-bar {
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 100%;
+}
+  #Randomizer{
+      background: transparent;
+      border: 0px;
   }
-  #flag-bar {
-    margin-left: auto;
-    margin-right: auto 
-  }
+
+button {
+  background-image: url(images/plate_image.jpg);
+  background-color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+#food-detail{
+  text-align: center;
+}
